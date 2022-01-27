@@ -1,0 +1,41 @@
+buildscript{
+
+    ext{
+        springBootVersion = '2.4.1'
+
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.spring')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    implementation 'org.seleniumhq.selenium:selenium-java:4.1.1'
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.1.1'
+    implementation 'org.seleniumhq.selenium:selenium-api:4.1.1'
+}
