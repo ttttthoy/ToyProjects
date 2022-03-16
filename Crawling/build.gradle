@@ -32,9 +32,9 @@ repositories {
 }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.spring')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.spring')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
     implementation 'org.seleniumhq.selenium:selenium-java:4.1.1'
     implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.1.1'
     implementation 'org.seleniumhq.selenium:selenium-api:4.1.1'

@@ -25,18 +25,22 @@ public class News {
 
         WebDriver driver = new ChromeDriver(options);
 
-        String url = "https://news.naver.com";
+        String url = "https://news.naver.com/";
 
         driver.get(url);
 
-        try {Thread.sleep(1000);} catch (InterruptedException e) {}
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
 
-        List<WebElement> el = driver.findElements(By.className("Nitem_link_menu"));
+        }
+
+        List<WebElement> el = driver.findElements(By.className("main_content"));
 
         int count = 0;
         for (int i = 0; i < el.size(); i++) {
 
-            if(el.get(i).getText().equals("IT/과학")) {
+            if(el.get(i).getText().equals("해드라인 더보기")) {
                 el.get(i).click();
 ;                break;
             }
@@ -44,7 +48,6 @@ public class News {
         }
 
         try {Thread.sleep(1000);} catch (InterruptedException e) {}
-
 
         try {
             if(driver != null) {
